@@ -1,0 +1,9 @@
+#!/bin/sh
+# file: smudger
+# type: executable shell script - Git filter
+# project: gitutils
+
+export B24DISK=$(getter define.base24.disk)
+export B24NAMETAG=$(getter define.base24.nametag)
+
+sed -e "s/\/\${b24disk}\/\${b24nametag}/\/${B24DISK}\/${B24NAMETAG}/g"

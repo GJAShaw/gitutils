@@ -1,0 +1,6 @@
+# file: .gitattributes
+# type: Git attributes
+# project: gitutils
+
+*.mk filter=mkfilter
+

@@ -1,0 +1,35 @@
+# Useful references
+https://git-scm.com/book/en/v2/Customizing-Git-Git-Attributes
+https://github.com/git/git/blob/master/t/t8010-cat-file-filters.sh
+
+
+# Set up git global config like this:
+
+git config --global filter.mkfilter.clean  cleaner
+git config --global filter.mkfilter.smudge smudger
+git config --global define.base24.disk    'b24s1'
+git config --global define.base24.nametag 'gs'
+git config --global define.connex.disk    'dds01'
+
+
+# ... giving:
+
+[filter "mkfilter"]
+	clean = cleaner
+	smudge = smudger
+
+[define "base24"]
+	disk = b24s1
+	nametag = gs
+
+[define "connex"]
+	disk = dds01
+	nametag = gs
+
+
+# In .gitattributes:
+*.mk filter=mkfilter
+
+
+# Ensure that cleaner, smudger and getter are in your PATH of executables.
+

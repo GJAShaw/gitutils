@@ -1,0 +1,5 @@
+# file: .gitignore
+# type: Git ignore file
+# project: gitutils
+
+/untracked/
