@@ -2,4 +2,8 @@
 # type: Git ignore file
 # project: gitutils
 
+# Stuff I just don't want to track
 /untracked/
+
+# LibreOffice Writer temporary files
+**/*.~lock*
