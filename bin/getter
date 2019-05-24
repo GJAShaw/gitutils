@@ -1,2 +1,16 @@
 #!/bin/sh
-git config --global --get "$@"
+# ------------------------------------------------------------------------------
+# file: getter
+# type: executable shell script
+# project: gitutils
+# purpose: output to console the value of a global Git configuration setting
+# argument: the name of a global Git configuration setting
+# result: - the value of the setting, if a valid existing one is supplied, or
+#         - nothing, otherwise
+# ------------------------------------------------------------------------------
+
+git config --global --get "$@" 2> /dev/null
+
+# ------------------------------------------------------------------------------
+# EOF
+# ------------------------------------------------------------------------------
