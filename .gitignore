@@ -7,6 +7,3 @@
 
 # LibreOffice Writer temporary files
 **/*.~lock*
-
-# /dev/null shows up in gitk! No reason to track it, so...
-**/dev/null
