@@ -9,7 +9,7 @@ export APPDISK=$(getter define.app.disk)
 export APPTAG=$(getter define.app.tag)
 
 # Substitute for OSS files, pipe result through substitution for Guardian files: 
-sed -e "s/\/\${appdisk}\/\${apptag}/\/${APPDISK}\/${APPTAG}/gI" | \
+sed -e "s/\/\${appdisk}\/\${apptag}/\/${APPDISK}\/${APPTAG}/g" | \
 sed -e "s/\\\$\${appdisk}\.\\\${apptag}/\$${APPDISK}.${APPTAG}/gI"
 
 # ------------------------------------------------------------------------------
