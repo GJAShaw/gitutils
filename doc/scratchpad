@@ -11,7 +11,7 @@ git config --global filter.mkfilter.smudge smudger
 git config --global define.base24.disk    'b24s1'
 git config --global define.base24.nametag 'gs'
 git config --global define.connex.disk    'dds01'
-git config --global diff odf.textconv     'odt2txt'
+git config --global diff.odf.textconv     'odt2txt'
 
 
 # ... giving:
