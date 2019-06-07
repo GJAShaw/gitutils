@@ -3,13 +3,15 @@ https://git-scm.com/book/en/v2/Customizing-Git-Git-Attributes
 https://github.com/git/git/blob/master/t/t8010-cat-file-filters.sh
 
 
-# Set up git global config like this:
+# Set up git global config like this (NB odf textconv is not needed for smudge/clean filters,
+# but I wanted to store the command somewhere, and here will do):
 
 git config --global filter.mkfilter.clean  cleaner
 git config --global filter.mkfilter.smudge smudger
 git config --global define.base24.disk    'b24s1'
 git config --global define.base24.nametag 'gs'
 git config --global define.connex.disk    'dds01'
+git config --global diff odf.textconv     'odt2txt'
 
 
 # ... giving:
